@@ -1,7 +1,8 @@
 #During initial setup (headless)
 #Add WiFi credentials to the SD card before first boot by creating wpa_supplicant.conf in the boot partition:
 
-sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+# On Mac/Linux
+nano /Volumes/bootfs/wpa_supplicant.conf
 
 
 
