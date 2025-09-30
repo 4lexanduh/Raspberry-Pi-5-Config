@@ -8,9 +8,10 @@
         #     cat ~/.ssh/id_rsa.pub
   
 
-  #2. Using Linux VM, install VMware Tools. This allows copy/paste from main pc. (public key is very long. we dont want to type it)
+  #2. Using Linux VM, install VMware Tools. Then reboot VM. This allows copy/paste from main pc. (public key is very long. we dont want to type it)
         #     sudo apt update
         #     sudo apt install open-vm-tools-desktop -y
+        #     sudo reboot
 
 
   #3 Mount your Raspberry Pi boot SD Card to Linux VM.
