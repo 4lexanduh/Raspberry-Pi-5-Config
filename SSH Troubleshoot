@@ -1,0 +1,37 @@
+#Install Raspberry Pi OS via Raspberry Pi Imager
+
+#Configure SSH and WiFi settings from Imager
+
+#If public key access denied, follow these steps
+
+  #1. Find your public key (use terminal on pc you want to ssh from)
+        #     cat ~/.ssh/id_rsa.pub
+  
+
+  #2. Using Linux VM, install VMware Tools. This allows copy/paste from main pc. (public key is very long. we dont want to type it)
+        #     sudo apt update
+        #     sudo apt install open-vm-tools-desktop -y
+
+
+  #3 Mount your Raspberry Pi boot SD Card to Linux VM.
+  
+ 
+  #4 In Linux terminal type (* = local profile on raspberry pi):
+        #     cd /media/ubuntu/rootfs/home/*
+
+
+  #5 Make .ssh folder and edit authorized keys
+        #    sudo mkdir -p .ssh
+        #    sudo nano .ssh/authorized_keys
+
+
+  #6 Paste your public key from the step 1 output. Then hit ctrl+x, enter, ctrl+o
+
+
+  #7 Change permissions and ownership
+        #    sudo chmod 700 .ssh
+        #    sudo chmod 600 .ssh/authorized_keys
+        #    sudo chown -R 1000:1000 .ssh
+
+
+#SSH should work now!!
