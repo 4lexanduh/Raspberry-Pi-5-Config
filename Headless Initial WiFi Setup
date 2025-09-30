@@ -17,3 +17,10 @@ network={
     ssid="YourNetworkName"
     psk="YourPassword"
 }
+
+
+
+
+# ping your raspberry pi to verify its connected to network
+
+ping raspberrypi.local
